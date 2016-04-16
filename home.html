@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DD JS-SDK</title>
+</head>
+<body>
+   
+</body>
+<script>
+window.onload=function()
+{
+DingTalkPC.config({
+    agentId: 19885635,
+    corpId: "ding7481cc1c5257d289",
+    timeStamp: 1414588745,
+    nonceStr: "CUMT1987wlrrlw",
+    signature: "mlno69/86QdlcRv2aYzGP14e8+o=",
+    jsApiList: [
+        'device.notification.alert',
+        'device.notification.prompt']
+    
+});
+DingTalkPC.ready(function(res){
+	  alert('ready');
+	DingTalkPC.device.notification.alert({
+	    message: "亲爱的",
+	    title: "提示",//可传空
+	    buttonName: "收到",
+	    onSuccess : function() {
+	        /*回调*/
+	    },
+	    onFail : function(err) {}
+	});
+
+});
+
+DingTalkPC.error(function(error){
+  /*{
+      errorCode: 1001, //错误码
+      errorMessage: '', //错误信息
+  }*/
+  alert(error);
+});
+}
+
+
+
+
+
+</script>
+<script src="http://g.alicdn.com/dingding/dingtalk-pc-api/2.3.1/index.js"></script>
+
+<!-- <script src="javascripts/logger.js"></script> -->
+<!-- <script src="javascripts/demo.js"></script> -->
+<!-- <script src="javascripts/zepto.min.js"></script> -->
+
+</html>
