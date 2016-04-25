@@ -261,6 +261,18 @@ DingTalkPC.ready(function(res){
 	    },
 	    onFail : function(err) {logger.i(err);}
 	});
+	
+	DingTalkPC.biz.util.open({
+    name:'profile',//页面名称
+    params:{
+        id: '1',// String 必选 用户工号
+        corpId:'ding7481cc1c5257d289' //String 必选 企业id
+    },//传参
+    onSuccess : function() {
+       	logger.i('ok');;
+    },
+    onFail : function(err) {logger.i(err);}
+});
 
 });
 
