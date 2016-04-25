@@ -250,15 +250,16 @@ DingTalkPC.config({
     
 });
 DingTalkPC.ready(function(res){
-	  alert('ready');
+	//  alert('ready');
 	DingTalkPC.device.notification.alert({
 	    message: "亲爱的",
 	    title: "提示",//可传空
 	    buttonName: "收到",
 	    onSuccess : function() {
 	        /*回调*/
+	       // alert('hello');
 	    },
-	    onFail : function(err) {}
+	    onFail : function(err) { alert(err);}
 	});
 
 });
