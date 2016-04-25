@@ -250,16 +250,16 @@ DingTalkPC.config({
     
 });
 DingTalkPC.ready(function(res){
-	log('ready');
+	logger.i('ready');
 	DingTalkPC.device.notification.alert({
 	    message: "亲爱的",
 	    title: "提示",//可传空
 	    buttonName: "收到",
 	    onSuccess : function() {
 	        /*回调*/
-	       	log('ready');
+	       	logger.i('hello');;
 	    },
-	    onFail : function(err) {	log(err);;}
+	    onFail : function(err) {logger.i(err);}
 	});
 
 });
@@ -269,8 +269,8 @@ DingTalkPC.error(function(error){
       errorCode: 1001, //错误码
       errorMessage: '', //错误信息
   }*/
-  //alert(error);
-  	log('ready');
+  alert(error.errorCode);
+  logger.i('ready');
 });
 
 var log = document.createElement('div');
