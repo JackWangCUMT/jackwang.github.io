@@ -250,16 +250,16 @@ DingTalkPC.config({
     
 });
 DingTalkPC.ready(function(res){
-	//  alert('ready');
+	log('ready');
 	DingTalkPC.device.notification.alert({
 	    message: "亲爱的",
 	    title: "提示",//可传空
 	    buttonName: "收到",
 	    onSuccess : function() {
 	        /*回调*/
-	       // alert('hello');
+	       	log('ready');
 	    },
-	    onFail : function(err) { alert(err);}
+	    onFail : function(err) {	log(err);;}
 	});
 
 });
@@ -272,7 +272,26 @@ DingTalkPC.error(function(error){
   alert(error);
 });
 
+var log = document.createElement('div');
+log.setAttribute('id', 'log');
+document.body.appendChild(log);
 
+var logger = {
+    i: function (info) {
+        add(info, 'i');
+    },
+    e: function (err) {
+        add(err, 'e');
+    }
+};
+
+function add(msg, level) {
+    var row = document.createElement('div');
+    row.setAttribute('class', 'log-row log-' + level);
+    row.innerHTML = msg;
+
+    document.querySelector('#log').appendChild(row);
+}
 </script>
 <!-- <script src="http://g.alicdn.com/dingding/dingtalk-pc-api/2.3.1/index.js"></script> -->
 
