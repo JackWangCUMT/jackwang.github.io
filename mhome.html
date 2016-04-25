@@ -25,12 +25,12 @@ dd.config({
 dd.ready(function(res){
 	logger.i('ready');
 	dd.device.notification.alert({
-	    message: "亲爱的",
-	    title: "提示",//可传空
-	    buttonName: "收到",
+	    message: "钉钉手机端消息",
+	    title: "提示ByJackWangCUMT",//可传空
+	    buttonName: "确定OK",
 	    onSuccess : function() {
 	        /*回调*/
-	       	logger.i('hello');;
+	       	logger.i('Mobile Load OK');;
 	    },
 	    onFail : function(err) {logger.i(err);}
 	});
