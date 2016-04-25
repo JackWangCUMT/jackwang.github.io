@@ -60,6 +60,23 @@ dd.error(function(error){
   logger.i('ready');
 });
 
+dd.biz.ding.post({
+    users : ['1'],//用户列表，工号
+    corpId: 'ding7481cc1c5257d289', //企业id
+    type: 1, //钉类型 1：image  2：link
+    alertType: 2,
+    alertDate: {"format":"yyyy-MM-dd HH:mm","value":"2015-05-09 08:00"},
+    attachment: {
+        images: [''],
+    }, //附件信息
+    text: 'jackwang', //消息
+    onSuccess : function(msg) {
+       //onSuccess将在点击发送之后调用
+       logger.i(msg);
+    },
+    onFail : function(err) {logger.i(err);}
+})
+
 var log = document.createElement('div');
 log.setAttribute('id', 'log');
 document.body.appendChild(log);
