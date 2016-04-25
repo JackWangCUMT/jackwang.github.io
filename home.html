@@ -7,8 +7,7 @@
    hello
 </body>
 <script>
-window.onload=function()
-{
+
 DingTalkPC.config({
     agentId: 19885635,
     corpId: "ding7481cc1c5257d289",
@@ -41,7 +40,7 @@ DingTalkPC.error(function(error){
   }*/
   alert(error);
 });
-}
+
 
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.DingTalkPC = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 "use strict";var frameTalkClient=require("@ali/frame-talk/client");exports.config=require("./libs/config"),exports.ready=require("./libs/ready").ready,exports.error=require("./libs/error").error,exports.device={},exports.device.notification={},exports.device.notification.alert=require("./libs/device/notification/alert"),exports.device.notification.confirm=require("./libs/device/notification/confirm"),exports.device.notification.toast=require("./libs/device/notification/toast"),exports.device.notification.prompt=require("./libs/device/notification/prompt"),exports.device.notification.actionSheet=require("./libs/device/notification/actionSheet"),exports.biz={},exports.biz.util={},exports.biz.util.open=require("./libs/biz/util/open"),exports.biz.util.openModal=require("./libs/biz/util/openModal"),exports.biz.util.openSlidePanel=require("./libs/biz/util/openSlidePanel"),exports.biz.util.uploadImage=require("./libs/biz/util/uploadImage"),exports.biz.util.downloadFile=require("./libs/biz/util/downloadFile"),exports.biz.util.openLocalFile=require("./libs/biz/util/openLocalFile"),exports.biz.util.isLocalFileExist=require("./libs/biz/util/isLocalFileExist"),exports.biz.util.previewImage=require("./libs/biz/util/previewImage"),exports.biz.util.previewFile=require("./libs/biz/util/previewFile"),exports.biz.util.openLink=require("./libs/biz/util/openLink"),exports.biz.navigation={},exports.biz.navigation.setTitle=require("./libs/biz/navigation/setTitle"),exports.biz.navigation.quit=require("./libs/biz/navigation/quit"),exports.biz.navigation.setLeft=require("./libs/biz/navigation/setLeft"),exports.biz.oauth={},exports.biz.oauth.authorize=require("./libs/biz/oauth/authorize"),exports.biz.contact={},exports.biz.contact.choose=require("./libs/biz/contact/choose"),exports.biz.customContact={},exports.biz.customContact.choose=require("./libs/biz/customContact/choose"),exports.biz.customContact.multipleChoose=require("./libs/biz/customContact/multipleChoose"),exports.biz.chat={},exports.biz.chat.chooseConversation=require("./libs/biz/chat/chooseConversation"),exports.biz.ding={},exports.biz.ding.post=require("./libs/biz/ding/post"),exports.ua=require("./libs/ua/ua"),exports.runtime={},exports.runtime.permission={},exports.runtime.permission.requestAuthCode=require("./libs/runtime/permission/requestAuthCode"),exports.addEventListener=frameTalkClient.addEventListener,document.addEventListener("click",function(i){require("./libs/_private/event")({event:"click"})},!1);
