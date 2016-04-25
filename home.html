@@ -8,38 +8,6 @@
 </body>
 <script>
 
-DingTalkPC.config({
-    agentId: 19885635,
-    corpId: "ding7481cc1c5257d289",
-    timeStamp: 1440678945,
-    nonceStr: "CUMT1987wlrrlw",
-    signature: "27b845fbcc6cfa16e870a791ed1ae8fd5ca4b5ce",
-    jsApiList: [
-        'device.notification.alert',
-        'device.notification.prompt']
-    
-});
-DingTalkPC.ready(function(res){
-	  alert('ready');
-	DingTalkPC.device.notification.alert({
-	    message: "亲爱的",
-	    title: "提示",//可传空
-	    buttonName: "收到",
-	    onSuccess : function() {
-	        /*回调*/
-	    },
-	    onFail : function(err) {}
-	});
-
-});
-
-DingTalkPC.error(function(error){
-  /*{
-      errorCode: 1001, //错误码
-      errorMessage: '', //错误信息
-  }*/
-  alert(error);
-});
 
 
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.DingTalkPC = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
@@ -270,6 +238,38 @@ module.exports={
 },{}]},{},[1])(1)
 });
 
+DingTalkPC.config({
+    agentId: 19885635,
+    corpId: "ding7481cc1c5257d289",
+    timeStamp: 1440678945,
+    nonceStr: "CUMT1987wlrrlw",
+    signature: "27b845fbcc6cfa16e870a791ed1ae8fd5ca4b5ce",
+    jsApiList: [
+        'device.notification.alert',
+        'device.notification.prompt']
+    
+});
+DingTalkPC.ready(function(res){
+	  alert('ready');
+	DingTalkPC.device.notification.alert({
+	    message: "亲爱的",
+	    title: "提示",//可传空
+	    buttonName: "收到",
+	    onSuccess : function() {
+	        /*回调*/
+	    },
+	    onFail : function(err) {}
+	});
+
+});
+
+DingTalkPC.error(function(error){
+  /*{
+      errorCode: 1001, //错误码
+      errorMessage: '', //错误信息
+  }*/
+  alert(error);
+});
 
 
 </script>
